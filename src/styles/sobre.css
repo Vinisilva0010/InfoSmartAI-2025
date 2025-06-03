@@ -1,0 +1,111 @@
+.sobre-bg {
+  background-image: url('/img/fundo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 20px 60px;
+  min-height: 100vh;
+  color: #e0f7fa;
+}
+
+.sobre-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sobre-titulo {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #00ccff;
+  text-shadow: 0 0 12px #00ccff, 0 0 22px #00ffff;
+  animation: brilho 3s infinite alternate;
+}
+
+.sobre-descricao {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  color: #d0d0d0;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+  animation: fadein 2s ease-in-out;
+}
+
+/* Animações suaves para dar vida ao texto */
+@keyframes brilho {
+  from {
+    text-shadow: 0 0 10px #00ccff;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffff, 0 0 30px #00ccff;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.sobre-missao-visao {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.sobre-card {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #00ccff;
+  border-radius: 16px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+}
+
+.sobre-card h2 {
+  color: #00ccff;
+  margin-bottom: 12px;
+}
+
+.sobre-card p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.sobre-valores {
+  margin-bottom: 40px;
+}
+
+.sobre-valores h2 {
+  color: #00ccff;
+  margin-bottom: 12px;
+}
+
+.sobre-valores ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.sobre-valores ul li::before {
+  content: "✔️ ";
+  color: #00ccff;
+}
+
+.sobre-img-container {
+  margin-top: 40px;
+}
+
+.sobre-img-container img {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+}
