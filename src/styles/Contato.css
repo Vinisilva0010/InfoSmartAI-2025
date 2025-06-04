@@ -1,0 +1,184 @@
+.contato-main {
+  padding-top: 96px;
+  min-height: 100vh;
+  background: none; /* O gradiente do corpo já está no index.css */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.contato-section {
+  max-width: 700px;
+  margin: 64px auto;
+  background: rgba(30,41,59,0.9);
+  border-radius: 24px;
+  padding: 32px;
+  color: #fff;
+  box-shadow: 0 4px 32px rgba(14,165,233,0.1);
+  border: 1px solid #164e63;
+}
+
+.contato-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0ea5e9;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.contato-desc {
+  font-size: 1.125rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 32px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #e0e7ef;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #164e63;
+  background: #0f172a;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(14,165,233,0.3);
+}
+
+.contato-submit-btn {
+  background: #0ea5e9;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, filter 0.2s;
+  font-size: 1.1rem;
+}
+
+.contato-submit-btn:hover {
+  background: #0369a1;
+  filter: brightness(1.1);
+}
+
+.contato-info {
+  margin-top: 32px;
+  text-align: center;
+  color: #e0e7ef;
+  line-height: 1.8;
+}
+
+.contato-info p {
+  margin-bottom: 8px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .contato-section {
+    margin: 32px 16px;
+    padding: 24px;
+  }
+
+  .contato-title {
+    font-size: 2rem;
+  }
+
+  .contato-desc {
+    font-size: 1rem;
+  }
+
+  .contato-form {
+    gap: 16px; /* Menor espaço entre os campos */
+  }
+
+  .form-group label {
+    font-size: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .contato-submit-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .contato-info {
+    margin-top: 24px;
+  }
+
+  .contato-info p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contato-section {
+    margin: 24px 8px;
+    padding: 16px;
+  }
+
+  .contato-title {
+    font-size: 1.75rem;
+  }
+
+  .contato-desc {
+    font-size: 0.875rem;
+  }
+
+  .contato-form {
+    gap: 12px; /* Reduzir o espaço entre os campos */
+  }
+
+  .form-group label {
+    font-size: 0.875rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.875rem;
+    padding: 8px;
+  }
+
+  .contato-submit-btn {
+    font-size: 0.875rem;
+    padding: 8px 16px;
+  }
+
+  .contato-info {
+    margin-top: 16px;
+  }
+
+  .contato-info p {
+    font-size: 0.875rem;
+  }
+}

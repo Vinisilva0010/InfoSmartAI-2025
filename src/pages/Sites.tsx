@@ -1,44 +1,51 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import 'swiper/swiper-bundle.css';
 import '../styles/Sites.css';
+import { Link } from 'react-router-dom';
 
-const sitesData = [
-  { id: 1, img: '/img/site1.jpg', title: 'Site Institucional' },
-  { id: 2, img: '/img/site2.jpg', title: 'Landing Page de Vendas' },
-  { id: 3, img: '/img/site3.jpg', title: 'Portfólio Profissional' },
-  { id: 4, img: '/img/site4.jpg', title: 'E-commerce Inteligente' },
-  { id: 5, img: '/img/site5.jpg', title: 'Site para Eventos' },
-  { id: 6, img: '/img/site6.jpg', title: 'Blog Otimizado' },
-  { id: 7, img: '/img/site7.jpg', title: 'Página de Captura' },
-  { id: 8, img: '/img/site8.jpg', title: 'Dashboard Personalizado' },
-  { id: 9, img: '/img/site9.jpg', title: 'Site com Chatbot' },
-  { id: 10, img: '/img/site10.jpg', title: 'Site com Integrações' },
-  { id: 11, img: '/img/site11.jpg', title: 'Site Educacional' },
-  { id: 12, img: '/img/site12.jpg', title: 'Sistema Web Sob Medida' },
+const sites = [
+  { id: 1, title: 'Site Institucional', desc: 'Presença digital profissional.', icon: '🌐', route: '/sites/1' },
+  { id: 2, title: 'Landing Page', desc: 'Páginas de alta conversão.', icon: '🚀', route: '/sites/2' },
+  { id: 3, title: 'E-commerce', desc: 'Venda online com segurança.', icon: '🛒', route: '/sites/3' },
+  { id: 4, title: 'Blog Personalizado', desc: 'Crie conteúdo e engaje seu público.', icon: '✍️', route: '/sites/4' },
+  { id: 5, title: 'Portfolio Online', desc: 'Mostre seus trabalhos de forma profissional.', icon: '📸', route: '/sites/5' },
 ];
 
 export default function Sites() {
   return (
-    <div className="sites-bg">
-      <h1 className="sites-title-impacto">Criação de Sites Profissionais e Modernos</h1>
-      <p className="sites-descricao">
-        Nós criamos sites rápidos, responsivos, bonitos e prontos para gerar resultados reais. De páginas simples a sistemas completos, entregamos tudo com tecnologia de ponta.
-      </p>
+    <main className="sites-main">
+      <section className="sites-section">
+        <h1 className="sites-title">Nossos Sites Profissionais</h1>
+        <p className="sites-desc">
+          Desenvolvemos sites modernos, responsivos e otimizados para oferecer a melhor experiência ao usuário e alcançar seus objetivos de negócio.
+        </p>
 
-      <div className="sites-video">
-        <video controls poster="/img/poster-video-sites.jpg">
-          <source src="/video/video-sites.mp4" type="video/mp4" />
-          Seu navegador não suporta vídeo.
-        </video>
-      </div>
-
-      <div className="sites-card-grid">
-        {sitesData.map((site) => (
-          <div key={site.id} className="sites-card">
-            <img src={site.img} alt={site.title} />
-            <h3>{site.title}</h3>
-            <button>Saiba mais</button>
-          </div>
-        ))}
-      </div>
-    </div>
+        <Swiper
+          spaceBetween={24}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1.2 },
+            1024: { slidesPerView: 2.2 },
+          }}
+          className="sites-card-swiper"
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          navigation
+          modules={[Autoplay, Pagination, Navigation]}
+        >
+          {sites.map((site) => (
+            <SwiperSlide key={site.id}>
+              <div className="sites-card">
+                <div className="sites-card-icon">{site.icon}</div>
+                <h3 className="sites-card-title">{site.title}</h3>
+                <p className="sites-card-desc">{site.desc}</p>
+                <Link to={site.route} className="sites-card-btn">Saiba mais</Link>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </section>
+    </main>
   );
 }

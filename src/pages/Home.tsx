@@ -1,145 +1,197 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
+import '../styles/Home.css';
+import { Link } from 'react-router-dom';
 
-const cards = Array.from({ length: 10 }).map((_, i) => ({
-  id: i + 1,
-  title: `Serviço ${i + 1}`,
-  desc: `Descrição do serviço ${i + 1}.`,
-  img: `/imagens/servico${i + 1}.jpg`,
-}));
 const agentes = [
-  { id: 1, title: 'Agente de Atendimento', desc: 'Atende clientes 24/7 com IA.', img: '/imagens/agente1.jpg' },
-  { id: 2, title: 'Agente de Vendas', desc: 'Automatiza vendas e propostas.', img: '/imagens/agente2.jpg' },
-  { id: 3, title: 'Agente de Suporte', desc: 'Resolve dúvidas e problemas.', img: '/imagens/agente3.jpg' },
+  { id: 1, title: 'Agente de Atendimento', desc: 'Atende clientes 24/7 com IA.', icon: '🤖', route: '/agentes/1' },
+  { id: 2, title: 'Agente de Vendas', desc: 'Automatiza vendas e propostas.', icon: '💼', route: '/agentes/2' },
+  { id: 3, title: 'Agente de Suporte', desc: 'Resolve dúvidas e problemas.', icon: '🛠️', route: '/agentes/3' },
 ];
 const automacoes = [
-  { id: 1, title: 'Automação de E-mails', desc: 'Envio automático de e-mails.', img: '/imagens/auto1.jpg' },
-  { id: 2, title: 'Integração de Sistemas', desc: 'Conecta plataformas e apps.', img: '/imagens/auto2.jpg' },
-  { id: 3, title: 'Robôs de Processos', desc: 'Executa tarefas repetitivas.', img: '/imagens/auto3.jpg' },
+   {
+    id: 1,
+    title: 'Automação de E-mails',
+    desc: 'Automatize campanhas, notificações, lembretes e follow-ups com e-mails segmentados e personalizados. Aumente o engajamento, reduza o tempo operacional e mantenha seu público sempre informado.',
+    icon: '📧',
+    route: '/automacoes/1'
+  },
+ {
+    id: 2,
+    title: 'Integração de Sistemas',
+    desc: 'Conecte CRMs, ERPs e outras ferramentas para fluxo contínuo de dados. Elimine erros manuais, ganhe eficiência e centralize suas operações em um ecossistema inteligente.',
+    icon: '🔗',
+    route: '/automacoes/2'
+  },
+  {
+    id: 3,
+    title: 'Robôs de Processos',
+    desc: 'Crie bots que executam tarefas repetitivas como preencher planilhas, extrair dados e processar documentos. Ideal para reduzir custos operacionais e aumentar a produtividade.',
+    icon: '🤖',
+    route: '/automacoes/3'
+  },
+   {
+    id: 4,
+    title: 'Atendimento ao Cliente',
+    desc: 'Implemente chatbots com IA e FAQs automáticos que atendem 24/7, melhoram a experiência do cliente e desafogam sua equipe de suporte com respostas ágeis e consistentes.',
+    icon: '💬',
+    route: '/automacoes/4'
+  },
 ];
 const sites = [
-  { id: 1, title: 'Site Institucional', desc: 'Presença digital profissional.', img: '/imagens/site1.jpg' },
-  { id: 2, title: 'Landing Page', desc: 'Páginas de alta conversão.', img: '/imagens/site2.jpg' },
-  { id: 3, title: 'E-commerce', desc: 'Venda online com segurança.', img: '/imagens/site3.jpg' },
-];
-const depoimentos = [
-  { id: 1, nome: 'Cliente 1', texto: 'Serviço excelente, recomendo!' },
-  { id: 2, nome: 'Cliente 2', texto: 'Atendimento rápido e eficiente.' },
-  { id: 3, nome: 'Cliente 3', texto: 'Minha empresa cresceu com a InfoSmart.' },
+  { id: 1, title: 'Site Institucional', desc: 'Presença digital profissional.', icon: '🌐', route: '/sites/1' },
+  { id: 2, title: 'Landing Page', desc: 'Páginas de alta conversão.', icon: '🚀', route: '/sites/2' },
+  { id: 3, title: 'E-commerce', desc: 'Venda online com segurança.', icon: '🛒', route: '/sites/3' },
 ];
 
 export default function Home() {
   return (
     <main className="home-main">
-      {/* Vídeo de fundo fixo */}
-      <video autoPlay loop muted playsInline className="home-video-bg-fixed">
-        <source src="/video/video.mp4" type="video/mp4" />
-        Seu navegador não suporta vídeo.
-      </video>
-      {/* Mensagem de boas-vindas sobre o vídeo */}
-      <div className="home-welcome-global">
-        <h1>Bem-vindo à InfoSmart </h1>
-        <p>Soluções inteligentes para o seu negócio</p>
+      {/* Vídeo de fundo */}
+      <div className="home-video-bg">
+        <video
+          className="w-full h-full object-cover"
+          src="/video/video.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        {/* Overlay escuro */}
+        <div className="absolute inset-0 bg-black/60 flex items-center justify-center pointer-events-none" />
       </div>
-      {/* Slides de cards */}
-      <section className="home-section" id="servicos">
+
+      {/* Mensagem de boas-vindas */}
+      <section className="home-welcome-section relative z-10 text-center px-4">
+        <h1 className="home-title text-white text-4xl md:text-6xl font-bold">
+          Bem-vindo à <span className="home-title-highlight">InfoSmart </span>
+        </h1>
+        <p className="home-subtitle text-white mt-4 text-lg md:text-2xl">
+          Soluções inteligentes em IA, automações e sites profissionais.
+        </p>
+      </section>
+
+      {/* Seção Agentes */}
+      <section className="home-section" id="agentes">
+        <h2 className="home-section-title">Agentes de IA</h2>
+        <p className="home-section-desc">Conheça nossos agentes inteligentes para cada necessidade.</p>
         <Swiper
-          className="home-cards-swiper"
           spaceBetween={24}
           slidesPerView={1}
-          breakpoints={{640:{slidesPerView:1.2},1024:{slidesPerView:3}}}
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          breakpoints={{
+            640: { slidesPerView: 1.1 },
+            1024: { slidesPerView: 2.2 },
+          }}
+          className="home-card-swiper"
+          autoplay={{ delay: 3500, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           navigation
           modules={[Autoplay, Pagination, Navigation]}
         >
-          {cards.map(card => (
-            <SwiperSlide key={card.id}>
-              <div className="home-card">
-                <img src={card.img} alt={card.title} className="home-card-img" />
-                <h3 className="home-card-title">{card.title}</h3>
-                <p className="home-card-desc">{card.desc}</p>
-                <button className="home-card-btn">Saiba mais</button>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </section>
-      {/* Descrição dos agentes */}
-      <section className="home-section" id="descricao-agentes">
-        <h2 className="home-title">Como fazemos agentes de IA</h2>
-        <p className="home-desc">Nossa equipe desenvolve agentes de IA personalizados, integrando as melhores tecnologias do mercado, com foco em automação, atendimento e resultados reais para o seu negócio.</p>
-      </section>
-      {/* Slides de agentes */}
-      <section className="agentes-section" id="agentes">
-        <h2 className="agentes-title">Agentes de IA</h2>
-        <Swiper className="agentes-swiper" spaceBetween={24} slidesPerView={1} breakpoints={{640:{slidesPerView:1.2},1024:{slidesPerView:3}}} autoplay={{ delay: 2500, disableOnInteraction: false }} pagination={{ clickable: true }} navigation modules={[Autoplay, Pagination, Navigation]}>
           {agentes.map((agente) => (
             <SwiperSlide key={agente.id}>
-              <div className="agentes-card">
-                <img src={agente.img} alt={agente.title} className="agentes-card-img" />
-                <h3 className="agentes-card-title">{agente.title}</h3>
-                <p className="agentes-card-desc">{agente.desc}</p>
-                <button className="agentes-btn">Saiba mais</button>
+              <div className="home-card">
+                <div className="home-card-icon">{agente.icon}</div>
+                <h3 className="home-card-title">{agente.title}</h3>
+                <p className="home-card-desc">{agente.desc}</p>
+                <Link to={agente.route} className="home-card-btn">Saiba mais</Link>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </section>
-      {/* Slides de automações */}
-      <section className="automacoes-section" id="automacoes">
-        <h2 className="automacoes-title">Automações</h2>
-        <Swiper className="automacoes-swiper" spaceBetween={24} slidesPerView={1} breakpoints={{640:{slidesPerView:1.2},1024:{slidesPerView:3}}} autoplay={{ delay: 2500, disableOnInteraction: false }} pagination={{ clickable: true }} navigation modules={[Autoplay, Pagination, Navigation]}>
+      {/* Seção Automações */}
+      <section className="home-section" id="automacoes">
+        <h2 className="home-section-title">Automações</h2>
+        <p className="home-section-desc">Automatize processos e ganhe produtividade.</p>
+        <Swiper
+          spaceBetween={24}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1.1 },
+            1024: { slidesPerView: 2.2 },
+          }}
+          className="home-card-swiper"
+          autoplay={{ delay: 3500, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          navigation
+          modules={[Autoplay, Pagination, Navigation]}
+        >
           {automacoes.map((auto) => (
             <SwiperSlide key={auto.id}>
-              <div className="automacoes-card">
-                <img src={auto.img} alt={auto.title} className="automacoes-card-img" />
-                <h3 className="automacoes-card-title">{auto.title}</h3>
-                <p className="automacoes-card-desc">{auto.desc}</p>
-                <button className="automacoes-btn">Saiba mais</button>
+              <div className="home-card">
+                <div className="home-card-icon">{auto.icon}</div>
+                <h3 className="home-card-title">{auto.title}</h3>
+                <p className="home-card-desc">{auto.desc}</p>
+                <Link to={auto.route} className="home-card-btn">Saiba mais</Link>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </section>
-      {/* Slides de sites */}
-      <section className="sites-section" id="sites">
-        <h2 className="sites-title">Sites Profissionais</h2>
-        <Swiper className="sites-swiper" spaceBetween={24} slidesPerView={1} breakpoints={{640:{slidesPerView:1.2},1024:{slidesPerView:3}}} autoplay={{ delay: 2500, disableOnInteraction: false }} pagination={{ clickable: true }} navigation modules={[Autoplay, Pagination, Navigation]}>
+      {/* Seção Sites */}
+      <section className="home-section" id="sites">
+        <h2 className="home-section-title">Sites Profissionais</h2>
+        <p className="home-section-desc">Sites modernos, responsivos e de alta performance.</p>
+        <Swiper
+          spaceBetween={24}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1.1 },
+            1024: { slidesPerView: 2.2 },
+          }}
+          className="home-card-swiper"
+          autoplay={{ delay: 3500, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          navigation
+          modules={[Autoplay, Pagination, Navigation]}
+        >
           {sites.map((site) => (
             <SwiperSlide key={site.id}>
-              <div className="sites-card">
-                <img src={site.img} alt={site.title} className="sites-card-img" />
-                <h3 className="sites-card-title">{site.title}</h3>
-                <p className="sites-card-desc">{site.desc}</p>
-                <button className="sites-btn">Saiba mais</button>
+              <div className="home-card">
+                <div className="home-card-icon">{site.icon}</div>
+                <h3 className="home-card-title">{site.title}</h3>
+                <p className="home-card-desc">{site.desc}</p>
+                <Link to={site.route} className="home-card-btn">Saiba mais</Link>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </section>
-      {/* Segundo vídeo: Por que contratar */}
+      {/* Por que contratar */}
       <section className="home-section" id="porque">
-        <div className="home-video-porque">
-          <video autoPlay loop muted playsInline className="home-video" poster="/vite.svg">
-            <source src="/video-porque.mp4" type="video/mp4" />
-            Seu navegador não suporta vídeo.
-          </video>
+        <h2 className="home-section-title">Por que contratar a InfoSmart?</h2>
+        <div className="home-why-us-box">
+          <div className="home-why-us-icon">🎥</div>
+          <div className="home-why-us-content">
+            <h3 className="home-why-us-title">Tecnologia, inovação e resultado</h3>
+            <p className="home-why-us-desc">A InfoSmart 2.0 entrega soluções de ponta, com atendimento personalizado, agilidade e foco total no sucesso do cliente.</p>
+          </div>
         </div>
-        <h2 className="home-title">Por que contratar a InfoSmart?</h2>
-        <p className="home-desc">A InfoSmart  entrega soluções de ponta, com atendimento personalizado, agilidade e foco total no sucesso do cliente.</p>
       </section>
       {/* Depoimentos */}
       <section className="home-section" id="depoimentos">
-        <h2 className="home-title">Depoimentos de Clientes</h2>
-        <Swiper className="sites-swiper" spaceBetween={24} slidesPerView={1} breakpoints={{640:{slidesPerView:1.2},1024:{slidesPerView:2}}} autoplay={{ delay: 3500, disableOnInteraction: false }} pagination={{ clickable: true }} navigation modules={[Autoplay, Pagination, Navigation]}>
-          {depoimentos.map((dep) => (
-            <SwiperSlide key={dep.id}>
-              <div className="sites-card" style={{ minHeight: 180 }}>
-                <div className="sites-icon" style={{ width: 64, height: 64, fontSize: 32 }}>👤</div>
-                <p className="sites-card-desc">"{dep.texto}"</p>
-                <span style={{ color: '#0ea5e9', fontWeight: 600 }}>{dep.nome}</span>
+        <h2 className="home-section-title">Depoimentos de Clientes</h2>
+        <Swiper
+          spaceBetween={24}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1.1 },
+            1024: { slidesPerView: 2.2 },
+          }}
+          className="home-card-swiper"
+          autoplay={{ delay: 3500, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          navigation
+          modules={[Autoplay, Pagination, Navigation]}
+        >
+          {[1,2,3].map((i) => (
+            <SwiperSlide key={i}>
+              <div className="home-card">
+                <div className="home-card-icon">👤</div>
+                <p className="home-card-desc">"Depoimento de cliente {i}. Serviço excelente, recomendo!"</p>
+                <span className="home-why-us-title">Cliente {i}</span>
               </div>
             </SwiperSlide>
           ))}

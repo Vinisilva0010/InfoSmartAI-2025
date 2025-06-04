@@ -1,0 +1,143 @@
+/* src/styles/como-funciona.css */
+
+.como-funciona-main {
+  padding: 120px 24px 48px; /* Adicionamos espaço no topo */
+  background-color: #0f172a;
+  color: #f1f5f9;
+  min-height: 100vh;
+}
+
+.como-funciona-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.como-funciona-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #60a5fa;
+  margin-bottom: 16px;
+}
+
+.como-funciona-intro {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 48px;
+}
+
+.como-funciona-etapas {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  text-align: left;
+}
+
+.etapa h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #93c5fd;
+  margin-bottom: 8px;
+}
+
+.etapa p {
+  font-size: 1.1rem;
+  color: #e2e8f0;
+  line-height: 1.7;
+}
+
+.como-funciona-cta {
+  margin-top: 56px;
+  text-align: center;
+}
+
+.como-funciona-cta p {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+.como-funciona-btn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.como-funciona-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .como-funciona-main {
+    padding: 100px 16px 32px; /* Ajuste para telas médias */
+  }
+
+  .como-funciona-title {
+    font-size: 2rem;
+  }
+
+  .como-funciona-intro {
+    font-size: 1.125rem;
+  }
+
+  .como-funciona-etapas {
+    gap: 24px; /* Reduzir o espaço entre as etapas */
+  }
+
+  .etapa h2 {
+    font-size: 1.25rem;
+  }
+
+  .etapa p {
+    font-size: 1rem;
+  }
+
+  .como-funciona-cta p {
+    font-size: 1.125rem;
+  }
+
+  .como-funciona-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .como-funciona-main {
+    padding: 80px 16px 16px; /* Ajuste para telas pequenas */
+  }
+
+  .como-funciona-title {
+    font-size: 1.75rem;
+  }
+
+  .como-funciona-intro {
+    font-size: 1rem;
+    margin-bottom: 32px;
+  }
+
+  .como-funciona-etapas {
+    gap: 16px; /* Menor espaço entre as etapas */
+  }
+
+  .etapa h2 {
+    font-size: 1.125rem;
+  }
+
+  .etapa p {
+    font-size: 0.875rem;
+  }
+
+  .como-funciona-cta p {
+    font-size: 1rem;
+  }
+
+  .como-funciona-btn {
+    font-size: 0.875rem;
+    padding: 8px 16px;
+  }
+}

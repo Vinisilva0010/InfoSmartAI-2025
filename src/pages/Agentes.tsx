@@ -1,52 +1,51 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import 'swiper/swiper-bundle.css';
 import '../styles/Agentes.css';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
-const agentesData = [
-  { id: 1, img: '/img/agente1.jpg', title: 'Atendente Virtual' },
-  { id: 2, img: '/img/agente2.jpg', title: 'Analista de Dados' },
-  { id: 3, img: '/img/agente3.jpg', title: 'Gerente de Projetos' },
-  { id: 4, img: '/img/agente4.jpg', title: 'Consultor Financeiro' },
-  { id: 5, img: '/img/agente5.jpg', title: 'Especialista em RH' },
-  { id: 6, img: '/img/agente6.jpg', title: 'Agente de Marketing' },
-  { id: 7, img: '/img/agente7.jpg', title: 'Gestor de Vendas' },
-  { id: 8, img: '/img/agente8.jpg', title: 'Consultor de TI' },
-  { id: 9, img: '/img/agente9.jpg', title: 'Agente de Suporte Técnico' },
-  { id: 10, img: '/img/agente10.jpg', title: 'Automatizador de Processos' },
-  { id: 11, img: '/img/agente11.jpg', title: 'Consultor Jurídico Digital' },
-  { id: 12, img: '/img/agente12.jpg', title: 'Assistente de Pesquisa' },
+const agentes = [
+  { id: 1, title: 'Agente de Atendimento', desc: 'Atende clientes 24/7 com IA.', icon: '🤖', route: '/agentes/1' },
+  { id: 2, title: 'Agente de Vendas', desc: 'Automatiza vendas e propostas.', icon: '💼', route: '/agentes/2' },
+  { id: 3, title: 'Agente de Suporte', desc: 'Resolve dúvidas e problemas.', icon: '🛠️', route: '/agentes/3' },
+  { id: 4, title: 'Agente de Marketing', desc: 'Cria campanhas e otimiza resultados.', icon: '📈', route: '/agentes/4' },
+  { id: 5, title: 'Agente de RH', desc: 'Auxilia em processos de recrutamento.', icon: '🤝', route: '/agentes/5' },
 ];
 
 export default function Agentes() {
   return (
-    <>
-      <Navbar />
-      <div className="agentes-bg">
-        <h1 className="agentes-title-impacto">Agentes de IA que transformam sua empresa</h1>
-        <p className="agentes-descricao">
-          Agentes de Inteligência Artificial personalizados são como funcionários digitais que atuam em tempo integral.
-          Eles otimizam processos, atendem clientes, analisam dados e ampliam o desempenho da sua empresa com eficiência e escala.
+    <main className="agentes-main">
+      <section className="agentes-section">
+        <h1 className="agentes-title">Nossos Agentes de IA</h1>
+        <p className="agentes-desc">
+          Nossos agentes de inteligência artificial são projetados para otimizar diversas áreas do seu negócio, desde o atendimento ao cliente até a gestão de processos.
         </p>
 
-        <div className="agentes-video">
-          <video controls poster="/img/poster-video-agentes.jpg">
-            <source src="/video/video-agentes.mp4" type="video/mp4" />
-            Seu navegador não suporta vídeo.
-          </video>
-        </div>
-
-        <div className="agentes-card-grid">
-          {agentesData.map((agente) => (
-            <div key={agente.id} className="agentes-card">
-              <img src={agente.img} alt={agente.title} />
-              <h3>{agente.title}</h3>
-              <button>Saiba mais</button>
-            </div>
+        <Swiper
+          spaceBetween={24}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1.2 },
+            1024: { slidesPerView: 2.2 },
+          }}
+          className="agentes-card-swiper"
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          navigation
+          modules={[Autoplay, Pagination, Navigation]}
+        >
+          {agentes.map((agente) => (
+            <SwiperSlide key={agente.id}>
+              <div className="agentes-card">
+                <div className="agentes-card-icon">{agente.icon}</div>
+                <h3 className="agentes-card-title">{agente.title}</h3>
+                <p className="agentes-card-desc">{agente.desc}</p>
+                <Link to={agente.route} className="agentes-card-btn">Saiba mais</Link>
+              </div>
+            </SwiperSlide>
           ))}
-        </div>
-
-        <Footer />
-      </div>
-    </>
+        </Swiper>
+      </section>
+    </main>
   );
 }

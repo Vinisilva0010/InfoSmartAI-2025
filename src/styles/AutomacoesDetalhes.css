@@ -1,0 +1,148 @@
+.detalhes-bg {
+  background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+  color: #fff;
+  padding: 60px 20px;
+  min-height: 100vh;
+}
+
+.detalhes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.detalhes-titulo {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #00ffcc;
+  text-shadow: 0 0 8px #00ffcc;
+}
+
+.detalhes-impacto {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  animation: fadeIn 2s ease;
+}
+
+.detalhes-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.detalhes-img {
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+}
+
+.detalhes-texto {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.detalhes-texto ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.detalhes-texto li {
+  margin-bottom: 10px;
+  color: #b2fefa;
+}
+
+.detalhes-video {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.detalhes-video video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 0 16px rgba(0, 255, 204, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .detalhes-titulo {
+    font-size: 2.5rem;
+  }
+
+  .detalhes-impacto {
+    font-size: 1.25rem;
+  }
+
+  .detalhes-conteudo {
+    gap: 20px; /* Menor espaço entre os elementos */
+  }
+
+  .detalhes-img {
+    width: 90vw; /* Quase a largura total da tela */
+    max-width: 400px;
+  }
+
+  .detalhes-texto {
+    font-size: 1rem;
+    max-width: 90vw; /* Ajuste para o texto caber bem na tela */
+  }
+
+  .detalhes-video {
+    margin-top: 30px;
+  }
+
+  .detalhes-video video {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .detalhes-titulo {
+    font-size: 2rem;
+  }
+
+  .detalhes-impacto {
+    font-size: 1rem;
+  }
+
+  .detalhes-conteudo {
+    flex-direction: column; /* Alinhamento em coluna para telas muito pequenas */
+    gap: 16px;
+  }
+
+  .detalhes-img {
+    width: 90vw; /* Ajuste para tela pequena */
+    max-width: 350px;
+  }
+
+  .detalhes-texto {
+    font-size: 0.875rem;
+    max-width: 90vw;
+  }
+
+  .detalhes-video {
+    margin-top: 20px;
+  }
+
+  .detalhes-video video {
+    max-width: 100%;
+  }
+}

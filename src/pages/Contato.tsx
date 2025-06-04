@@ -1,15 +1,40 @@
+import '../styles/Contato.css';
+
 export default function Contato() {
   return (
-    <main className="sobre-main">
-      <section className="sobre-section">
-        <h1 className="sobre-title">Contato</h1>
-        <p className="sobre-desc">Entre em contato conosco para dúvidas, orçamentos ou parcerias!</p>
-        <form style={{ display: 'flex', flexDirection: 'column', gap: 16, maxWidth: 400, margin: '0 auto' }}>
-          <input type="text" placeholder="Seu nome" style={{ padding: 8, borderRadius: 8, border: '1px solid #164e63' }} />
-          <input type="email" placeholder="Seu e-mail" style={{ padding: 8, borderRadius: 8, border: '1px solid #164e63' }} />
-          <textarea placeholder="Sua mensagem" rows={4} style={{ padding: 8, borderRadius: 8, border: '1px solid #164e63' }} />
-          <button type="submit" className="sites-btn">Enviar</button>
+    <main className="contato-main">
+      <section className="contato-section">
+        <h1 className="contato-title">Entre em Contato</h1>
+        <p className="contato-desc">
+          Preencha o formulário abaixo ou utilize nossos canais de comunicação para falar com a gente.
+        </p>
+
+        <form className="contato-form">
+          <div className="form-group">
+            <label htmlFor="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto" />
+          </div>
+          <div className="form-group">
+            <label htmlFor="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows={5} required></textarea>
+          </div>
+          <button type="submit" className="contato-submit-btn">Enviar Mensagem</button>
         </form>
+
+        <div className="contato-info">
+          <p>Ou fale conosco:</p>
+          <p>Email: contato@infosmart.com</p>
+          <p>Telefone: (XX) XXXX-XXXX</p>
+          <p>WhatsApp: (XX) 9XXXX-XXXX</p>
+        </div>
       </section>
     </main>
   );

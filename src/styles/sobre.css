@@ -52,6 +52,7 @@
     transform: translateY(0);
   }
 }
+
 .sobre-missao-visao {
   display: flex;
   flex-wrap: wrap;
@@ -108,4 +109,152 @@
   max-width: 100%;
   border-radius: 16px;
   box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+}
+
+.sobre-main {
+  padding-top: 96px;
+  min-height: 100vh;
+  background: none; /* O gradiente do corpo já está no index.css */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.sobre-section {
+  max-width: 900px;
+  margin: 64px auto;
+  background: rgba(30,41,59,0.9);
+  border-radius: 24px;
+  padding: 32px;
+  color: #fff;
+  box-shadow: 0 4px 32px rgba(14,165,233,0.1);
+  border: 1px solid #164e63;
+}
+
+.sobre-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0ea5e9;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.sobre-desc {
+  font-size: 1.125rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 32px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.sobre-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #6366f1;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.sobre-list {
+  list-style: disc inside;
+  margin-left: 16px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+}
+
+.sobre-list li span {
+  font-weight: 500;
+  color: #0ea5e9;
+}
+
+.sobre-contact-text {
+  font-size: 1.125rem;
+  color: rgba(255,255,255,0.9);
+  margin-top: 32px;
+  text-align: center;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .sobre-bg {
+    padding: 80px 16px 40px; /* Ajuste no padding */
+  }
+
+  .sobre-titulo {
+    font-size: 2.2rem;
+  }
+
+  .sobre-descricao {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+
+  .sobre-missao-visao {
+    gap: 16px; /* Reduzindo o espaçamento entre os cartões */
+  }
+
+  .sobre-card {
+    width: 100%; /* Cartões ocupando toda a largura disponível */
+    max-width: 320px;
+    padding: 16px;
+  }
+
+  .sobre-valores h2,
+  .sobre-card h2 {
+    font-size: 1.125rem;
+  }
+
+  .sobre-img-container img {
+    margin-top: 16px;
+  }
+
+  .sobre-title {
+    font-size: 2rem;
+  }
+
+  .sobre-desc {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre-bg {
+    padding: 60px 8px 32px; /* Ajuste no padding */
+  }
+
+  .sobre-titulo {
+    font-size: 1.8rem;
+  }
+
+  .sobre-descricao {
+    font-size: 0.875rem;
+    margin-bottom: 16px;
+  }
+
+  .sobre-missao-visao {
+    flex-direction: column; /* Exibindo os cartões em coluna */
+    gap: 12px;
+  }
+
+  .sobre-card {
+    width: 100%; /* Cartões ocupando 100% da largura */
+    max-width: 90%;
+  }
+
+  .sobre-valores h2 {
+    font-size: 1rem;
+  }
+
+  .sobre-img-container img {
+    margin-top: 8px;
+  }
+
+  .sobre-title {
+    font-size: 1.75rem;
+  }
+
+  .sobre-desc {
+    font-size: 0.875rem;
+  }
 }
