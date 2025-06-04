@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
-import '../styles/Automacoes.css';
+import '../../styles/Automacoes.css';
 import { Link } from 'react-router-dom';
 
 const automacoes = [

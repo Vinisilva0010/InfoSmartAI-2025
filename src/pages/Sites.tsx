@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
-import '../styles/Sites.css';
+import '../../styles/Sites.css';
 import { Link } from 'react-router-dom';
 
 const sites = [
