@@ -161,28 +161,41 @@
 /* Responsividade para mobile */
 
 /* Swiper cards maior e melhor ajuste para telas pequenas */
+/* Responsividade para mobile */
+
+/* Swiper cards maior e melhor ajuste para telas pequenas */
 @media (max-width: 768px) {
   .automacoes-main {
     padding-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo */
   }
   .automacoes-card {
     min-width: unset;
     max-width: 100%;
-    width: calc(100% - 32px);
+    width: calc(100% - 32px); /* Ajusta para 100% com padding */
     padding: 24px 16px;
+    margin: 8px 0; /* Adiciona espaçamento entre os cards */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo da carta */
   }
 
   .automacoes-section {
     margin: 32px 16px;
     padding: 24px 16px;
+    border-radius: 24px;
   }
 
   .automacoes-title {
     font-size: 2.2rem;
+    text-align: center; /* Centraliza o título */
   }
 
   .automacoes-desc {
     font-size: 1.05rem;
+    text-align: center; /* Centraliza a descrição */
     line-height: 1.5;
   }
 
@@ -194,31 +207,41 @@
 
   .automacoes-card-title {
     font-size: 1.2rem;
+    text-align: center; /* Centraliza o título da carta */
   }
 
   .automacoes-card-desc {
     font-size: 0.9rem;
     line-height: 1.4;
+    text-align: center; /* Centraliza a descrição da carta */
   }
 
   .automacoes-card-btn {
     padding: 10px 20px;
     font-size: 0.9rem;
+    border-radius: 10px;
+    text-align: center;
+    align-self: center; /* Centraliza o botão */
   }
 
   .automacoes-extra-title {
     font-size: 1.8rem;
+    text-align: center; /* Centraliza o título da seção extra */
   }
 
   .automacoes-extra-desc {
     font-size: 1rem;
     line-height: 1.4;
+    text-align: center; /* Centraliza a descrição da seção extra */
   }
 }
 
 @media (max-width: 480px) {
   .automacoes-main {
     padding-top: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo */
   }
   .automacoes-section {
     margin: 24px 8px;
@@ -228,25 +251,35 @@
 
   .automacoes-card {
     padding: 20px 10px;
+    margin: 8px 0; /* Adiciona espaçamento entre os cards */
+    width: 100%; /* Ocupa toda a largura disponível */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo da carta */
   }
 
   .automacoes-card-desc {
     font-size: 0.8rem;
     line-height: 1.3;
+    text-align: center; /* Centraliza a descrição da carta */
   }
 
   .automacoes-card-btn {
     padding: 8px 18px;
     font-size: 0.8rem;
     border-radius: 10px;
+    text-align: center;
+    align-self: center; /* Centraliza o botão */
   }
 
   .automacoes-title {
     font-size: 1.9rem;
+    text-align: center; /* Centraliza o título */
   }
 
   .automacoes-desc {
     font-size: 0.9rem;
+    text-align: center; /* Centraliza a descrição */
   }
 
   .automacoes-card-icon {
@@ -257,22 +290,27 @@
 
   .automacoes-card-title {
     font-size: 1.1rem;
+    text-align: center; /* Centraliza o título da carta */
   }
 
   .automacoes-extra-title {
     font-size: 1.5rem;
+    text-align: center; /* Centraliza o título da seção extra */
   }
 
   .automacoes-extra-desc {
     font-size: 0.9rem;
+    text-align: center; /* Centraliza a descrição da seção extra */
   }
 
   .como-funciona-chamada {
     font-size: 0.9rem;
+    text-align: center; /* Centraliza o texto */
   }
 
   .como-funciona-botao {
     padding: 10px 20px;
     font-size: 0.9rem;
+    text-align: center; /* Centraliza o botão */
   }
 }
