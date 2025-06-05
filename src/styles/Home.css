@@ -231,9 +231,31 @@
   .home-why-us-content {
     text-align: left;
   }
+}
+
+@media (max-width: 768px) {
+  .home-main {
+    padding-top: 64px;
+  }
+  .home-section-title {
+    font-size: 2rem;
+  }
+  .home-video-bg {
+    display: none; /* Desativa o vídeo de fundo em dispositivos móveis */
+  }
+
+  .home-card-swiper {
+    overflow-x: hidden;
+    padding: 0 8px;
+  }
+}
+
 /* Ajustes para telas pequenas (celulares) */
 
 @media (max-width: 480px) {
+  .home-main {
+    padding-top: 48px;
+  }
   .home-title {
     font-size: 1.75rem;
   }
@@ -244,31 +266,22 @@
 
   .home-card {
     padding: 24px 12px;
-    min-width: 240px;
+    max-width: 100%;
+    min-width: unset;
+    width: calc(100% - 24px);
   }
 
   .home-card-title {
-    font-size: 1.125rem;
+    font-size: 1.1rem;
   }
 
   .home-card-desc {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .home-section {
-    margin-top: 48px;
-    margin-bottom: 48px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 0 16px;
   }
-}
-
-@media (max-width: 768px) {
-  .home-video-bg {
-    display: none; /* Desativa o vídeo de fundo em dispositivos móveis */
-  }
-
-  .home-card-swiper {
-    overflow-x: hidden;
-    padding: 0 8px;
-  }
-}
 }

@@ -112,6 +112,7 @@
 
 @media (max-width: 768px) {
   .agentes-main {
+    padding-top: 64px; /* Ajuste para telas menores */
     padding: 0 12px; /* Reduzindo a margem lateral */
   }
 
@@ -121,8 +122,9 @@
   }
 
   .agentes-card {
-    min-width: 90vw; /* Quase a largura total da tela */
-    max-width: 90vw;
+    min-width: unset; /* Remove min-width fixo */
+    max-width: 100%;
+    width: calc(100% - 24px); /* Ajusta para preenchimento */
     padding: 24px 12px;
   }
 
@@ -156,6 +158,7 @@
 
 @media (max-width: 480px) {
   .agentes-main {
+    padding-top: 48px; /* Mais ajuste para celulares */
     padding: 0 8px; /* Reduzindo ainda mais a margem lateral */
   }
 
@@ -165,8 +168,6 @@
   }
 
   .agentes-card {
-    min-width: 90vw; /* Quase a largura total da tela */
-    max-width: 90vw;
     padding: 16px 8px;
   }
 
@@ -179,9 +180,9 @@
   }
 
   .agentes-card-icon {
-    width: 60px;
-    height: 60px;
-    font-size: 2rem;
+    width: 56px; /* Tamanho ligeiramente menor para ícones */
+    height: 56px;
+    font-size: 1.8rem;
   }
 
   .agentes-card-title {

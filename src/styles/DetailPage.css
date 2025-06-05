@@ -61,6 +61,9 @@
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
+  .detail-main {
+    padding-top: 64px;
+  }
   .detail-section {
     margin: 32px 16px;
     padding: 24px;
@@ -86,6 +89,9 @@
 }
 
 @media (max-width: 480px) {
+  .detail-main {
+    padding-top: 48px;
+  }
   .detail-section {
     margin: 24px 8px;
     padding: 16px;

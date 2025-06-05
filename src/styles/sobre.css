@@ -177,6 +177,9 @@
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
+  .sobre-main {
+    padding-top: 64px; /* Ajuste para telas menores */
+  }
   .sobre-bg {
     padding: 80px 16px 40px; /* Ajuste no padding */
   }
@@ -195,7 +198,7 @@
   }
 
   .sobre-card {
-    width: 100%; /* Cartões ocupando toda a largura disponível */
+    width: calc(100% - 32px); /* Cartões ocupando toda a largura disponível com padding */
     max-width: 320px;
     padding: 16px;
   }
@@ -216,9 +219,24 @@
   .sobre-desc {
     font-size: 1rem;
   }
+
+  .sobre-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .sobre-list {
+    font-size: 0.95rem;
+  }
+
+  .sobre-contact-text {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .sobre-main {
+    padding-top: 48px; /* Mais ajuste para celulares */
+  }
   .sobre-bg {
     padding: 60px 8px 32px; /* Ajuste no padding */
   }
@@ -238,11 +256,12 @@
   }
 
   .sobre-card {
-    width: 100%; /* Cartões ocupando 100% da largura */
+    width: calc(100% - 24px); /* Cartões ocupando toda a largura com padding menor */
     max-width: 90%;
   }
 
-  .sobre-valores h2 {
+  .sobre-valores h2,
+  .sobre-card h2 {
     font-size: 1rem;
   }
 
@@ -256,5 +275,17 @@
 
   .sobre-desc {
     font-size: 0.875rem;
+  }
+
+  .sobre-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .sobre-list {
+    font-size: 0.875rem;
+  }
+
+  .sobre-contact-text {
+    font-size: 0.9rem;
   }
 }

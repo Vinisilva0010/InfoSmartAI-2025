@@ -161,207 +161,13 @@
 
 /* Swiper cards maior e melhor ajuste para telas pequenas */
 @media (max-width: 768px) {
-  .automacoes-card {
-    min-width: 90vw !important;
-    max-width: 90vw !important;
-    padding: 24px 16px;
-  }
-
-  .automacoes-section {
-    margin: 32px 16px;
-    padding: 24px 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .automacoes-section {
-    margin: 16px 8px !important;
-    padding: 16px 12px !important;
-    border-radius: 16px;
-  }
-
-  .automacoes-card {
-    min-width: 90vw !important;
-    max-width: 90vw !important;
-    padding: 16px 12px !important;
-  }
-
-  .automacoes-card-desc {
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-
-  .automacoes-card-btn {
-    padding: 12px 24px !important;
-    font-size: 1rem !important;
-    border-radius: 12px !important;
-  }
   .automacoes-main {
-  padding-top: 96px;
-  min-height: 100vh;
-  background: none; /* O gradiente do corpo já está no index.css */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 16px;
-}
-
-.automacoes-section {
-  max-width: 900px;
-  margin: 64px auto;
-  background: rgba(30, 41, 59, 0.9);
-  border-radius: 24px;
-  padding: 32px;
-  color: #fff;
-  box-shadow: 0 4px 32px rgba(99, 102, 241, 0.1);
-  border: 1px solid #164e63;
-}
-
-.automacoes-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #6366f1;
-  margin-bottom: 24px;
-  text-align: center;
-}
-
-.automacoes-desc {
-  font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 32px;
-  text-align: center;
-  line-height: 1.6;
-}
-
-.automacoes-card-swiper {
-  padding-bottom: 48px; /* Espaço para paginação */
-}
-
-.automacoes-card-swiper .swiper-slide {
-  display: flex;
-  justify-content: center;
-}
-
-.automacoes-card {
-  background: rgba(15, 23, 42, 0.9);
-  border-radius: 24px;
-  padding: 32px 16px;
-  color: #fff;
-  box-shadow: 0 4px 32px rgba(99, 102, 241, 0.15);
-  border: 1px solid #164e63;
-  min-width: 280px; /* Ajustado para evitar que fique muito estreito */
-  max-width: 320px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.automacoes-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 48px rgba(99, 102, 241, 0.25);
-}
-
-.automacoes-card-icon {
-  width: 80px;
-  height: 80px;
-  background: rgba(99, 102, 241, 0.25);
-  border-radius: 50%;
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  color: #6366f1;
-  box-shadow: 0 0 8px #6366f1, 0 0 16px #0ea5e9;
-}
-
-.automacoes-card-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 4px;
-  text-align: center;
-}
-
-.automacoes-card-desc {
-  font-size: 1rem;
-  color: #cbd5e1;
-  text-align: center;
-  overflow-wrap: break-word;
-}
-
-.automacoes-card-btn {
-  background: #6366f1;
-  color: #fff;
-  font-weight: 600;
-  padding: 12px 28px;
-  border-radius: 12px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  align-self: center;
-  margin-top: auto;
-  box-shadow: 0 0 8px #6366f1;
-}
-
-.automacoes-card-btn:hover {
-  background: #4f46e5;
-}
-
-/* NOVA SEÇÃO PERSONALIZADA */
-.automacoes-extra {
-  margin-top: 64px;
-  text-align: center;
-  color: #e0e7ff;
-  max-width: 640px;
-}
-
-.automacoes-extra-title {
-  font-size: 2rem;
-  margin-bottom: 12px;
-  color: #818cf8;
-}
-
-.automacoes-extra-desc {
-  font-size: 1.125rem;
-  margin-bottom: 24px;
-  line-height: 1.5;
-}
-
-/* Link do processo passo a passo */
-.como-funciona-link-container {
-  margin-top: 32px;
-}
-
-.como-funciona-chamada {
-  margin-bottom: 12px;
-  font-weight: 600;
-}
-
-.como-funciona-botao {
-  display: inline-block;
-  background-color: #4f46e5;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 0 12px #6366f1;
-  transition: background-color 0.3s ease;
-}
-
-.como-funciona-botao:hover {
-  background-color: #4338ca;
-}
-
-/* Responsividade para mobile */
-
-/* Swiper cards maior e melhor ajuste para telas pequenas */
-@media (max-width: 768px) {
+    padding-top: 64px;
+  }
   .automacoes-card {
-    min-width: 90vw !important;
-    max-width: 90vw !important;
+    min-width: unset;
+    max-width: 100%;
+    width: calc(100% - 32px);
     padding: 24px 16px;
   }
 
@@ -369,19 +175,55 @@
     margin: 32px 16px;
     padding: 24px 16px;
   }
+
+  .automacoes-title {
+    font-size: 2rem;
+  }
+
+  .automacoes-desc {
+    font-size: 1rem;
+  }
+
+  .automacoes-card-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 2rem;
+  }
+
+  .automacoes-card-title {
+    font-size: 1.125rem;
+  }
+
+  .automacoes-card-desc {
+    font-size: 0.875rem;
+  }
+
+  .automacoes-card-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+
+  .automacoes-extra-title {
+    font-size: 1.8rem;
+  }
+
+  .automacoes-extra-desc {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .automacoes-main {
+    padding-top: 48px;
+  }
   .automacoes-section {
-    margin: 16px 8px !important;
-    padding: 16px 12px !important;
+    margin: 24px 8px;
+    padding: 16px 12px;
     border-radius: 16px;
   }
 
   .automacoes-card {
-    min-width: 90vw !important;
-    max-width: 90vw !important;
-    padding: 16px 12px !important;
+    padding: 16px 12px;
   }
 
   .automacoes-card-desc {
@@ -390,10 +232,44 @@
   }
 
   .automacoes-card-btn {
-    padding: 12px 24px !important;
-    font-size: 1rem !important;
-    border-radius: 12px !important;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 10px;
   }
-}
 
+  .automacoes-title {
+    font-size: 1.75rem;
+  }
+
+  .automacoes-desc {
+    font-size: 0.875rem;
+  }
+
+  .automacoes-card-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.8rem;
+  }
+
+  .automacoes-card-title {
+    font-size: 1rem;
+  }
+
+  .automacoes-extra-title {
+    font-size: 1.5rem;
+  }
+
+  .automacoes-extra-desc {
+    font-size: 0.9rem;
+  }
+
+  .como-funciona-chamada {
+    font-size: 0.9rem;
+  }
+
+  .como-funciona-botao {
+    padding: 10px 20px;
+    font-size: 0.875rem;
+    border-radius: 10px;
+  }
 }

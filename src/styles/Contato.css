@@ -124,6 +124,9 @@
 
 /* RESPONSIVO PARA TABLETS */
 @media (max-width: 768px) {
+  .contato-main {
+    padding-top: 64px;
+  }
   .contato-section {
     margin: 32px 16px;
     padding: 24px;
@@ -155,6 +158,9 @@
 
 /* RESPONSIVO PARA CELULARES */
 @media (max-width: 480px) {
+  .contato-main {
+    padding-top: 48px;
+  }
   .contato-section {
     margin: 24px 8px;
     padding: 16px;

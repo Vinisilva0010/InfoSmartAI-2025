@@ -143,4 +143,67 @@
 
 .chatbot-send:hover:not(:disabled) {
   filter: brightness(1.1);
+}
+
+@media (max-width: 768px) {
+  .chatbot-container {
+    bottom: 16px;
+    right: 16px;
+  }
+  .chatbot-fab {
+    padding: 16px 18px;
+    font-size: 1.8rem;
+  }
+  .chatbot-box {
+    width: 320px;
+    height: 400px;
+  }
+  .chatbot-title {
+    font-size: 1rem;
+  }
+  .chatbot-messages {
+    font-size: 0.95rem;
+  }
+  .chatbot-input {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+  .chatbot-send {
+    font-size: 0.9rem;
+    padding: 6px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatbot-container {
+    bottom: 12px;
+    right: 12px;
+  }
+  .chatbot-fab {
+    padding: 14px 16px;
+    font-size: 1.6rem;
+  }
+  .chatbot-box {
+    width: 90vw;
+    height: 60vh;
+    max-height: 80vh;
+  }
+  .chatbot-title {
+    font-size: 0.9rem;
+  }
+  .chatbot-messages {
+    font-size: 0.85rem;
+  }
+  .chatbot-msg-user,
+  .chatbot-msg-bot {
+    max-width: 90%;
+  }
+  .chatbot-input {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+  }
+  .chatbot-send {
+    font-size: 0.8rem;
+    padding: 5px 14px;
+  }
 } 
