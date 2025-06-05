@@ -36,6 +36,7 @@
   margin-bottom: 32px;
   text-align: center;
   line-height: 1.6;
+  word-wrap: break-word;
 }
 
 .contato-form {
@@ -115,6 +116,7 @@
   text-align: center;
   color: #cbd5e1;
   line-height: 1.8;
+  word-wrap: break-word;
 }
 
 .contato-info p {
@@ -133,11 +135,12 @@
   }
 
   .contato-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .contato-desc {
-    font-size: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.5;
   }
 
   .form-group input,
@@ -153,6 +156,7 @@
 
   .contato-info p {
     font-size: 0.95rem;
+    line-height: 1.6;
   }
 }
 
@@ -163,15 +167,16 @@
   }
   .contato-section {
     margin: 24px 8px;
-    padding: 16px;
+    padding: 20px;
   }
 
   .contato-title {
-    font-size: 1.75rem;
+    font-size: 1.9rem;
   }
 
   .contato-desc {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
   }
 
   .form-group input,
@@ -181,15 +186,16 @@
   }
 
   .form-group label {
-    font-size: 0.875rem;
+    font-size: 0.85rem;
   }
 
   .contato-submit-btn {
     font-size: 0.9rem;
-    padding: 12px;
+    padding: 10px;
   }
 
   .contato-info p {
-    font-size: 0.875rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 }

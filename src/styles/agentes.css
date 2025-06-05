@@ -118,41 +118,43 @@
 
   .agentes-section {
     margin: 32px 8px;
-    padding: 24px;
+    padding: 24px; /* Aumentar o padding para melhor espaçamento interno */
   }
 
   .agentes-card {
     min-width: unset; /* Remove min-width fixo */
     max-width: 100%;
     width: calc(100% - 24px); /* Ajusta para preenchimento */
-    padding: 24px 12px;
+    padding: 24px 12px; /* Ajuste o padding */
   }
 
   .agentes-title {
-    font-size: 2rem;
+    font-size: 2.2rem; /* Levemente maior */
   }
 
   .agentes-desc {
-    font-size: 1rem;
+    font-size: 1.05rem; /* Ajuste para melhor legibilidade */
+    line-height: 1.5; /* Melhorar o espaçamento entre linhas */
   }
 
   .agentes-card-icon {
-    width: 64px;
-    height: 64px;
-    font-size: 2rem;
+    width: 72px; /* Ajuste */
+    height: 72px; /* Ajuste */
+    font-size: 2.2rem; /* Ajuste */
   }
 
   .agentes-card-title {
-    font-size: 1.125rem;
+    font-size: 1.2rem; /* Ajuste */
   }
 
   .agentes-card-desc {
-    font-size: 0.875rem;
+    font-size: 0.9rem; /* Ajuste */
+    line-height: 1.4; /* Melhorar o espaçamento entre linhas */
   }
 
   .agentes-card-btn {
-    padding: 8px 16px;
-    font-size: 0.875rem;
+    padding: 10px 20px; /* Ajuste */
+    font-size: 0.9rem; /* Ajuste */
   }
 }
 
@@ -164,37 +166,37 @@
 
   .agentes-section {
     margin: 24px 8px;
-    padding: 16px;
+    padding: 20px; /* Ajuste o padding */
   }
 
   .agentes-card {
-    padding: 16px 8px;
+    padding: 20px 10px; /* Ajuste o padding */
   }
 
   .agentes-title {
-    font-size: 1.75rem;
+    font-size: 1.9rem; /* Ajuste */
   }
 
   .agentes-desc {
-    font-size: 0.875rem;
+    font-size: 0.95rem; /* Ajuste */
   }
 
   .agentes-card-icon {
-    width: 56px; /* Tamanho ligeiramente menor para ícones */
-    height: 56px;
-    font-size: 1.8rem;
+    width: 64px; /* Ajuste */
+    height: 64px; /* Ajuste */
+    font-size: 2rem; /* Ajuste */
   }
 
   .agentes-card-title {
-    font-size: 1rem;
+    font-size: 1.1rem; /* Ajuste */
   }
 
   .agentes-card-desc {
-    font-size: 0.75rem;
+    font-size: 0.8rem; /* Ajuste */
   }
 
   .agentes-card-btn {
-    padding: 6px 16px;
-    font-size: 0.75rem;
+    padding: 8px 18px; /* Ajuste */
+    font-size: 0.8rem; /* Ajuste */
   }
 }

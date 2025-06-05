@@ -33,12 +33,14 @@
   margin-bottom: 32px;
   text-align: justify;
   line-height: 1.6;
+  word-wrap: break-word; /* Garante quebra de linha em palavras longas */
 }
 
 .detail-info {
   margin-bottom: 8px;
   color: #a0aec0;
   font-size: 0.95rem;
+  word-wrap: break-word; /* Garante quebra de linha em palavras longas */
 }
 
 .detail-back-btn {
@@ -70,21 +72,22 @@
   }
 
   .detail-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .detail-desc {
-    font-size: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.5;
   }
 
   .detail-info {
-    font-size: 0.875rem;
+    font-size: 0.9rem;
   }
 
   .detail-back-btn {
     font-size: 1rem;
-    padding: 8px 20px;
-    margin-top: 16px;
+    padding: 10px 20px;
+    margin-top: 20px;
   }
 }
 
@@ -94,24 +97,25 @@
   }
   .detail-section {
     margin: 24px 8px;
-    padding: 16px;
+    padding: 20px;
   }
 
   .detail-title {
-    font-size: 1.75rem;
+    font-size: 1.9rem;
   }
 
   .detail-desc {
-    font-size: 0.875rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
   }
 
   .detail-info {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 
   .detail-back-btn {
-    font-size: 0.875rem;
-    padding: 8px 16px;
-    margin-top: 12px;
+    font-size: 0.9rem;
+    padding: 8px 18px;
+    margin-top: 16px;
   }
 }

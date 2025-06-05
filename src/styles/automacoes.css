@@ -91,6 +91,7 @@
   color: #cbd5e1;
   text-align: center;
   overflow-wrap: break-word;
+  line-height: 1.4;
 }
 
 .automacoes-card-btn {
@@ -177,53 +178,22 @@
   }
 
   .automacoes-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .automacoes-desc {
-    font-size: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.5;
   }
 
   .automacoes-card-icon {
-    width: 64px;
-    height: 64px;
-    font-size: 2rem;
+    width: 72px;
+    height: 72px;
+    font-size: 2.2rem;
   }
 
   .automacoes-card-title {
-    font-size: 1.125rem;
-  }
-
-  .automacoes-card-desc {
-    font-size: 0.875rem;
-  }
-
-  .automacoes-card-btn {
-    padding: 8px 20px;
-    font-size: 0.9rem;
-  }
-
-  .automacoes-extra-title {
-    font-size: 1.8rem;
-  }
-
-  .automacoes-extra-desc {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .automacoes-main {
-    padding-top: 48px;
-  }
-  .automacoes-section {
-    margin: 24px 8px;
-    padding: 16px 12px;
-    border-radius: 16px;
-  }
-
-  .automacoes-card {
-    padding: 16px 12px;
+    font-size: 1.2rem;
   }
 
   .automacoes-card-desc {
@@ -234,25 +204,59 @@
   .automacoes-card-btn {
     padding: 10px 20px;
     font-size: 0.9rem;
+  }
+
+  .automacoes-extra-title {
+    font-size: 1.8rem;
+  }
+
+  .automacoes-extra-desc {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .automacoes-main {
+    padding-top: 48px;
+  }
+  .automacoes-section {
+    margin: 24px 8px;
+    padding: 20px 12px;
+    border-radius: 16px;
+  }
+
+  .automacoes-card {
+    padding: 20px 10px;
+  }
+
+  .automacoes-card-desc {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .automacoes-card-btn {
+    padding: 8px 18px;
+    font-size: 0.8rem;
     border-radius: 10px;
   }
 
   .automacoes-title {
-    font-size: 1.75rem;
+    font-size: 1.9rem;
   }
 
   .automacoes-desc {
-    font-size: 0.875rem;
+    font-size: 0.9rem;
   }
 
   .automacoes-card-icon {
-    width: 56px;
-    height: 56px;
-    font-size: 1.8rem;
+    width: 64px;
+    height: 64px;
+    font-size: 2rem;
   }
 
   .automacoes-card-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .automacoes-extra-title {
@@ -269,7 +273,6 @@
 
   .como-funciona-botao {
     padding: 10px 20px;
-    font-size: 0.875rem;
-    border-radius: 10px;
+    font-size: 0.9rem;
   }
 }
