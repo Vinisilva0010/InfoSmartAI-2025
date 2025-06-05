@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import '../../styles/DetailPage.css';
+import '../styles/DetailPage.css';
 
 const sitesData = [
   { id: 1, title: 'Site Institucional', desc: 'Crie uma presença online sólida para sua empresa com um site institucional moderno e profissional. Apresente seus serviços, história e informações de contato de forma clara e atraente para seus clientes.' },

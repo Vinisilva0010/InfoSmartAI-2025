@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import '../../styles/DetailPage.css';
+import '../styles/DetailPage.css';
 
 const agentesData = [
   { id: 1, title: 'Agente de Atendimento', desc: 'Este agente de IA é especializado em interações com clientes, oferecendo suporte 24/7, respondendo a perguntas frequentes e direcionando usuários para os recursos certos. Ideal para otimizar o atendimento ao cliente e reduzir a carga de trabalho da equipe.' },
