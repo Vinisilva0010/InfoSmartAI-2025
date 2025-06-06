@@ -49,7 +49,7 @@ export default function Home() {
   return (
     <main className="home-main">
       {/* Vídeo de fundo */}
-      <div className="home-video-bg">
+      <div className="home-video-bg relative w-full h-full">
         <video
           className="w-full h-full object-cover"
           src="/video/video.mp4"
@@ -60,6 +60,7 @@ export default function Home() {
         />
         {/* Overlay escuro */}
         <div className="absolute inset-0 bg-black/60 flex items-center justify-center pointer-events-none" />
+
       </div>
 
       {/* Mensagem de boas-vindas */}
@@ -73,10 +74,18 @@ export default function Home() {
       </section>
 
       {/* Seção Agentes */}
-      <section className="home-section" id="agentes">
-        <h2 className="home-section-title">Agentes de IA</h2>
-        <p className="home-section-desc">Conheça nossos agentes inteligentes para cada necessidade.</p>
-        <Swiper
+     <section className="home-section" id="agentes">
+  <h2 className="home-section-title">Agentes de IA</h2>
+  <p className="home-section-desc font-medium text-lg text-center max-w-3xl mx-auto mb-4">
+    Potencialize seu negócio com agentes inteligentes que trabalham por você 24 horas por dia. 
+    Atendimento automatizado, vendas aceleradas e suporte eficiente — tudo com inteligência artificial.
+  </p>
+  <p className="home-section-desc text-sm text-gray-400 text-center max-w-2xl mx-auto mb-6">
+    Nossos agentes são personalizados para cada necessidade: atendimento ao cliente, geração de leads, 
+    suporte técnico e muito mais.
+  </p>
+  {/* Swiper dos agentes */}
+  <Swiper
           spaceBetween={24}
           slidesPerView={1}
           breakpoints={{
@@ -102,10 +111,19 @@ export default function Home() {
         </Swiper>
       </section>
       {/* Seção Automações */}
-      <section className="home-section" id="automacoes">
-        <h2 className="home-section-title">Automações</h2>
-        <p className="home-section-desc">Automatize processos e ganhe produtividade.</p>
-        <Swiper
+<section className="home-section" id="automacoes">
+  <h2 className="home-section-title">Automações</h2>
+  <p className="home-section-desc font-medium text-lg text-center max-w-3xl mx-auto mb-4">
+    Diga adeus às tarefas repetitivas e ganhe tempo para o que realmente importa. Automatize 
+    processos internos, e-mails, integrações e aumente sua eficiência.
+  </p>
+  <p className="home-section-desc text-sm text-gray-400 text-center max-w-2xl mx-auto mb-6">
+    Desde a integração de sistemas até robôs de processos, nossas automações ajudam você a escalar 
+    com menos esforço e mais precisão.
+  </p>
+  {/* Swiper das automações */}
+  <Swiper 
+
           spaceBetween={24}
           slidesPerView={1}
           breakpoints={{
@@ -131,10 +149,18 @@ export default function Home() {
         </Swiper>
       </section>
       {/* Seção Sites */}
-      <section className="home-section" id="sites">
-        <h2 className="home-section-title">Sites Profissionais</h2>
-        <p className="home-section-desc">Sites modernos, responsivos e de alta performance.</p>
-        <Swiper
+     <section className="home-section" id="sites">
+  <h2 className="home-section-title">Sites Profissionais</h2>
+  <p className="home-section-desc font-medium text-lg text-center max-w-3xl mx-auto mb-4">
+    Sua presença online começa aqui. Sites modernos, responsivos e pensados para converter visitantes 
+    em clientes.
+  </p>
+  <p className="home-section-desc text-sm text-gray-400 text-center max-w-2xl mx-auto mb-6">
+    Criamos sites institucionais, páginas de venda e lojas virtuais que entregam velocidade, design de 
+    alto nível e resultados reais.
+  </p>
+  {/* Swiper dos sites */}
+  <Swiper
           spaceBetween={24}
           slidesPerView={1}
           breakpoints={{

@@ -1,22 +1,23 @@
+/* ---------- HOME PRINCIPAL ---------- */
 .home-main {
   padding-top: 96px;
   min-height: 100vh;
-  background: none; /* O gradiente do corpo já está no index.css */
+  background: none;
   position: relative;
-  overflow-x: hidden; /* Garante que não haja rolagem horizontal */
+  overflow-x: hidden;
 }
 
+/* ---------- VÍDEO DE FUNDO ---------- */
 .home-video-bg {
-  position: fixed; /* para fixar no fundo da página */
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: -10; /* Garante que o vídeo fique no fundo */
+  z-index: -20;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  pointer-events: none; /* Mantém o vídeo não interativo para clicks */
+  pointer-events: none;
 }
-
 
 .home-video-bg video {
   width: 100%;
@@ -24,19 +25,25 @@
   object-fit: cover;
 }
 
+/* Placeholder opcional se o vídeo não carregar */
 .home-video-placeholder {
-  position: relative; /* para ficar acima do overlay */
-  color: #fff;
-  font-size: 2.5rem;
-  font-weight: 800;
-  animation: pulse 2s infinite;
-  text-shadow: 0 0 8px #0ea5e9, 0 0 16px #6366f1;
+  position: relative;
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+  animation: pulse-glow 2s infinite;
+  text-shadow:
+    0 0 12px #0ea5e9,
+    0 0 24px #6366f1,
+    0 0 48px #0ea5e9;
   user-select: none;
   z-index: 20;
+  padding: 0 16px;
+  line-height: 1.2;
 }
 
-/* Seus estilos existentes continuam abaixo */
-
+/* ---------- SEÇÃO DE BOAS-VINDAS ---------- */
 .home-welcome-section {
   display: flex;
   flex-direction: column;
@@ -45,21 +52,20 @@
   height: 60vh;
   text-align: center;
   padding: 0 16px;
-  position: relative; /* Adicionado para que o z-index funcione */
-  z-index: 1; /* Garante que o conteúdo fique acima do vídeo */
+  position: relative;
+  z-index: 1;
 }
 
 .home-title {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: 3rem;
+  font-weight: 900;
   color: #0ea5e9;
   margin-bottom: 16px;
   animation: typing 2s steps(40, end) 1 normal both;
   overflow: hidden;
-  white-space: nowrap; /* Manter para o efeito de digitação em telas maiores */
+  white-space: nowrap;
   border-right: 4px solid #0ea5e9;
   padding-right: 8px;
-  word-wrap: break-word; /* Garante quebra de linha para o título */
 }
 
 .home-title-highlight {
@@ -68,24 +74,25 @@
 
 .home-subtitle {
   font-size: 1.125rem;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   animation: fade-in-delay 2s ease-in;
   max-width: 600px;
   margin: 0 auto;
-  word-wrap: break-word; /* Garante quebra de linha em palavras longas */
-  line-height: 1.5; /* Ajuste para melhor legibilidade */
+  word-wrap: break-word;
+  line-height: 1.5;
 }
 
+/* ---------- SEÇÕES GERAIS ---------- */
 .home-section {
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin: 80px 0;
   padding: 0 8px;
-  overflow-x: hidden; /* Evita rolagem horizontal para as seções */
+  overflow-x: hidden;
 }
 
-.home-section-title {
-  font-size: 2.25rem;
-  font-weight: bold;
+.home-section-title,
+.home-why-us-title {
+  font-size: 2.5rem;
+  font-weight: 800;
   color: #0ea5e9;
   margin-bottom: 16px;
   text-align: center;
@@ -93,24 +100,25 @@
 
 .home-section-desc {
   margin-bottom: 32px;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  word-wrap: break-word; /* Garante quebra de linha em palavras longas */
-  line-height: 1.5; /* Ajuste para melhor legibilidade */
+  word-wrap: break-word;
+  line-height: 1.5;
 }
 
+/* ---------- SLIDES E CARDS ---------- */
 .home-card-swiper .swiper-slide {
   display: flex;
   justify-content: center;
-  width: 100%; /* Garante que o slide ocupe a largura total disponível */
+  width: 100%;
 }
 
 .home-card {
-  background: rgba(15,23,42,0.9);
+  background: rgba(15, 23, 42, 0.9);
   border-radius: 24px;
   padding: 32px 16px;
   color: #fff;
-  box-shadow: 0 4px 32px rgba(14,165,233,0.15);
+  box-shadow: 0 4px 32px rgba(14, 165, 233, 0.15);
   border: 1px solid #164e63;
   min-width: 260px;
   max-width: 320px;
@@ -119,18 +127,18 @@
   align-items: center;
   gap: 16px;
   transition: transform 0.3s, box-shadow 0.3s;
-  width: 100%; /* Permite que o card se adapte */
+  width: 100%;
 }
 
 .home-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 48px rgba(14,165,233,0.25);
+  box-shadow: 0 8px 48px rgba(14, 165, 233, 0.25);
 }
 
 .home-card-icon {
   width: 80px;
   height: 80px;
-  background: rgba(14,165,233,0.25);
+  background: rgba(14, 165, 233, 0.25);
   border-radius: 50%;
   margin-bottom: 16px;
   display: flex;
@@ -145,16 +153,17 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 4px;
-  word-wrap: break-word; /* Garante quebra de linha em palavras longas */
-  line-height: 1.3; /* Ajuste para melhor legibilidade */
+  text-align: center;
+  word-wrap: break-word;
+  line-height: 1.3;
 }
 
 .home-card-desc {
   font-size: 1rem;
   color: #cbd5e1;
   text-align: center;
-  word-wrap: break-word; /* Garante quebra de linha em palavras longas */
-  line-height: 1.4; /* Ajuste para melhor legibilidade */
+  word-wrap: break-word;
+  line-height: 1.4;
 }
 
 .home-card-btn {
@@ -166,13 +175,14 @@
   border: none;
   cursor: pointer;
   transition: background 0.2s;
-  text-decoration: none; /* Para Link */
+  text-decoration: none;
 }
 
 .home-card-btn:hover {
   background: #0369a1;
 }
 
+/* ---------- SEÇÃO VÍDEO "POR QUE" ---------- */
 .home-video-porque {
   width: 100%;
   max-width: 900px;
@@ -181,7 +191,7 @@
   overflow: hidden;
   margin: 0 auto 24px auto;
   border-radius: 24px;
-  box-shadow: 0 4px 32px rgba(14,165,233,0.15);
+  box-shadow: 0 4px 32px rgba(14, 165, 233, 0.15);
 }
 
 .home-video-player {
@@ -190,8 +200,9 @@
   object-fit: cover;
 }
 
+/* ---------- SEÇÃO POR QUE CONTRATAR ---------- */
 .home-why-us-box {
-  background: rgba(30,41,59,0.9);
+  background: rgba(30, 41, 59, 0.9);
   border-radius: 24px;
   padding: 32px;
   color: #fff;
@@ -199,7 +210,7 @@
   flex-direction: column;
   align-items: center;
   gap: 32px;
-  box-shadow: 0 4px 32px rgba(14,165,233,0.15);
+  box-shadow: 0 4px 32px rgba(14, 165, 233, 0.15);
   border: 1px solid #164e63;
   max-width: 900px;
   margin: 0 auto;
@@ -225,12 +236,25 @@
 }
 
 .home-why-us-desc {
-  color: rgba(255,255,255,0.8);
-  word-wrap: break-word; /* Garante quebra de linha em palavras longas */
-  line-height: 1.5; /* Ajuste para melhor legibilidade */
+  color: rgba(255, 255, 255, 0.8);
+  word-wrap: break-word;
+  line-height: 1.5;
 }
 
-/* Media Queries */
+/* ---------- BOX DESTACADO ---------- */
+.home-highlight-box {
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid #0ea5e9;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
 @media (min-width: 768px) {
   .home-why-us-box {
     flex-direction: row;
@@ -245,60 +269,63 @@
   .home-main {
     padding-top: 64px;
   }
-  .home-section-title {
-    font-size: 1.8rem; /* Ajuste para menor */
-  }
-  .home-video-bg {
-    z-index: -20; /* Garante que o vídeo fique bem no fundo */
-  }
 
-  .home-card-swiper {
-    overflow-x: hidden;
-    padding: 0 8px;
+  .home-section-title {
+    font-size: 1.8rem;
   }
 
   .home-title {
-    font-size: 2rem; /* Ajuste para melhor legibilidade */
-    white-space: normal; /* Permite quebra de linha em telas menores */
-    border-right: none; /* Remove o cursor de digitação */
+    font-size: 2rem;
+    white-space: normal;
+    border-right: none;
     padding-right: 0;
   }
+
+  .home-title-highlight {
+    color: #14b8a6;
+    text-shadow: 0 0 10px #14b8a6, 0 0 20px #06b6d4;
+  }
+
   .home-subtitle {
-    font-size: 1rem; /* Ajuste para melhor legibilidade */
-    line-height: 1.4; /* Ajuste o espaçamento entre linhas */
-  }
-  .home-section {
-    margin-top: 50px; /* Reduz a margem superior */
-    margin-bottom: 50px; /* Reduz a margem inferior */
-    padding: 0 16px;
-  }
-  .home-card {
-    padding: 24px 16px; /* Ajuste o padding */
-    min-width: unset; /* Remove min-width fixo */
-    max-width: 100%;
-    width: calc(100% - 32px); /* Ajusta para preenchimento */
-  }
-  .home-card-title {
-    font-size: 1.1rem; /* Ajuste para melhor legibilidade */
-    line-height: 1.3;
-  }
-  .home-card-desc {
-    font-size: 0.9rem; /* Ajuste para melhor legibilidade */
+    font-size: 1rem;
     line-height: 1.4;
   }
+
+  .home-section {
+    margin: 50px 0;
+    padding: 0 16px;
+  }
+
+  .home-card {
+    padding: 24px 16px;
+    min-width: unset;
+    max-width: 100%;
+    width: calc(100% - 32px);
+  }
+
+  .home-card-title {
+    font-size: 1.1rem;
+    color: #0ea5e9;
+    font-weight: 700;
+  }
+
+  .home-card-desc {
+    font-size: 0.9rem;
+    color: #e0f2fe;
+  }
+
   .home-why-us-box {
-    padding: 24px; /* Ajuste o padding */
-    flex-direction: column; /* Garante empilhamento vertical */
+    padding: 24px;
+    flex-direction: column;
     text-align: center;
   }
-  .home-why-us-content {
-    text-align: center;
-  }
+
   .home-why-us-title {
-    font-size: 1.6rem; /* Ajuste para melhor legibilidade */
+    font-size: 1.6rem;
   }
+
   .home-why-us-desc {
-    font-size: 0.9rem; /* Ajuste para melhor legibilidade */
+    font-size: 0.9rem;
   }
 }
 
@@ -306,51 +333,43 @@
   .home-main {
     padding-top: 40px;
   }
+
   .home-title {
-    font-size: 1.4rem; /* Ajuste final para melhor legibilidade */
-    white-space: normal;
-    border-right: none;
-    padding-right: 0;
+    font-size: 1.4rem;
   }
 
   .home-subtitle {
-    font-size: 0.85rem; /* Ajuste final */
-    line-height: 1.3; /* Ajuste final */
+    font-size: 0.85rem;
+    line-height: 1.3;
   }
 
   .home-card {
-    padding: 16px 12px; /* Ajuste final do padding */
-    max-width: 100%;
-    min-width: unset;
-    width: calc(100% - 24px); /* Ajusta para preenchimento */
+    padding: 16px 12px;
+    width: calc(100% - 24px);
   }
 
   .home-card-title {
-    font-size: 1rem; /* Ajuste final */
-    line-height: 1.2;
+    font-size: 1rem;
   }
 
   .home-card-desc {
-    font-size: 0.75rem; /* Ajuste final */
-    line-height: 1.2;
+    font-size: 0.75rem;
   }
 
   .home-section {
-    margin-top: 28px; /* Ajuste final da margem */
-    margin-bottom: 28px; /* Ajuste final da margem */
+    margin: 28px 0;
     padding: 0 12px;
   }
 
   .home-why-us-box {
-    padding: 20px; /* Ajuste final do padding */
+    padding: 20px;
   }
+
   .home-why-us-icon {
-    font-size: 3.5rem; /* Ajuste final */
+    font-size: 3.5rem;
   }
+
   .home-why-us-title {
-    font-size: 1.2rem; /* Ajuste final */
-  }
-  .home-why-us-desc {
-    font-size: 0.8rem; /* Ajuste final */
+    font-size: 1.2rem;
   }
 }

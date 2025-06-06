@@ -1,98 +1,7 @@
-.sites-bg {
-  background-image: url('/img/fundo.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 60px 20px 0;
-  min-height: 100vh;
-  color: #e0f7fa;
-}
-
-.sites-title-impacto {
-  text-align: center;
-  font-size: 2.8rem;
-  font-weight: bold;
-  color: #00ccff;
-  margin-bottom: 20px;
-  text-shadow: 0 0 15px #00ccff;
-}
-
-.sites-descricao {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #ddd;
-  max-width: 800px;
-  margin: 0 auto 40px auto;
-}
-
-.sites-video {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
-.sites-video video {
-  width: 80%;
-  border-radius: 16px;
-  box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
-}
-
-.sites-card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-bottom: 60px;
-}
-
-.sites-card {
-  background: rgba(0, 0, 0, 0.5);
-  border: 2px solid #00ccff;
-  border-radius: 16px;
-  padding: 16px;
-  text-align: center;
-  box-shadow: 0 0 15px rgba(0, 204, 255, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.sites-card:hover {
-  transform: translateY(-5px);
-}
-
-.sites-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 12px;
-}
-
-.sites-card h3 {
-  font-size: 1.1rem;
-  color: #00ccff;
-  margin-bottom: 12px;
-}
-
-.sites-card button {
-  background-color: #00ccff;
-  color: #000;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.2s ease;
-}
-
-.sites-card button:hover {
-  background-color: #00aee0;
-}
-
+/* Fundo e estrutura principal */
 .sites-main {
-  padding-top: 96px;
+  padding-top: 150px;
   min-height: 100vh;
-  background: none; /* O gradiente do corpo já está no index.css */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,16 +9,18 @@
 }
 
 .sites-section {
+  width: 100%;
   max-width: 900px;
   margin: 64px auto;
-  background: rgba(30,41,59,0.9);
+  background: rgba(30, 41, 59, 0.9);
   border-radius: 24px;
   padding: 32px;
   color: #fff;
-  box-shadow: 0 4px 32px rgba(14,165,233,0.1);
+  box-shadow: 0 4px 32px rgba(14, 165, 233, 0.1);
   border: 1px solid #164e63;
 }
 
+/* Título e descrição */
 .sites-title {
   font-size: 2.5rem;
   font-weight: bold;
@@ -120,25 +31,27 @@
 
 .sites-desc {
   font-size: 1.125rem;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 32px;
   text-align: center;
   line-height: 1.6;
 }
 
+/* Swiper */
 .sites-card-swiper .swiper-slide {
   display: flex;
   justify-content: center;
 }
 
+/* Card */
 .sites-card {
-  background: rgba(15,23,42,0.9);
+  background: rgba(15, 23, 42, 0.9);
   border-radius: 24px;
   padding: 32px 16px;
   color: #fff;
-  box-shadow: 0 4px 32px rgba(14,165,233,0.15);
+  box-shadow: 0 4px 32px rgba(14, 165, 233, 0.15);
   border: 1px solid #164e63;
-  min-width: 260px;
+  width: 100%;
   max-width: 320px;
   display: flex;
   flex-direction: column;
@@ -149,15 +62,14 @@
 
 .sites-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 48px rgba(14,165,233,0.25);
+  box-shadow: 0 8px 48px rgba(14, 165, 233, 0.25);
 }
 
 .sites-card-icon {
   width: 80px;
   height: 80px;
-  background: rgba(14,165,233,0.25);
+  background: rgba(14, 165, 233, 0.25);
   border-radius: 50%;
-  margin-bottom: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -170,12 +82,14 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 4px;
+  text-align: center;
 }
 
 .sites-card-desc {
   font-size: 1rem;
   color: #cbd5e1;
   text-align: center;
+  line-height: 1.4;
 }
 
 .sites-card-btn {
@@ -187,61 +101,37 @@
   border: none;
   cursor: pointer;
   transition: background 0.2s;
-  text-decoration: none; /* Para Link */
+  text-decoration: none;
 }
 
 .sites-card-btn:hover {
   background: #0369a1;
 }
 
-/* Responsividade para telas menores */
+/* Responsividade */
 @media (max-width: 768px) {
-  .sites-bg {
-    padding: 60px 16px 0;
-  }
-
-  .sites-title-impacto {
-    font-size: 2.2rem;
-  }
-
-  .sites-descricao {
-    font-size: 1rem;
-    margin-bottom: 24px;
-  }
-
-  .sites-video video {
-    width: 90%; /* Aumenta a largura do vídeo em telas menores */
-  }
-
-  .sites-card-grid {
-    gap: 16px; /* Menor espaço entre os cartões */
-  }
-
-  /* Ajustes para os cards em telas menores */
-  .sites-card {
-    padding: 24px 16px;
-    min-width: unset;
-    max-width: 100%;
-    width: calc(100% - 32px);
-  }
-
   .sites-main {
-    padding-top: 64px;
-    padding: 0 12px;
+    padding-top: 100px; /* aumente aqui também */
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   .sites-section {
-    margin: 32px 8px;
+    margin: 32px 0;
     padding: 24px;
   }
 
   .sites-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .sites-desc {
-    font-size: 1.05rem;
-    line-height: 1.5;
+    font-size: 1rem;
+  }
+
+  .sites-card {
+    padding: 24px 16px;
+    max-width: 100%;
   }
 
   .sites-card-icon {
@@ -256,7 +146,6 @@
 
   .sites-card-desc {
     font-size: 0.9rem;
-    line-height: 1.4;
   }
 
   .sites-card-btn {
@@ -266,40 +155,19 @@
 }
 
 @media (max-width: 480px) {
-  .sites-bg {
-    padding: 60px 8px 0;
-  }
-
-  .sites-title-impacto {
-    font-size: 1.8rem;
-  }
-
-  .sites-descricao {
-    font-size: 0.9rem;
-    margin-bottom: 16px;
-  }
-
-  .sites-video video {
-    width: 100%; /* Ajuste para vídeo ocupar 100% da largura em telas pequenas */
-  }
-
-  /* Ajustes para os cards em telas muito pequenas */
-  .sites-card {
-    padding: 20px 10px;
-  }
-
   .sites-main {
-    padding-top: 48px;
-    padding: 0 8px;
+    padding-top: 90px; /* ou ajuste conforme a navbar no mobile */
+    padding-left: 8px;
+    padding-right: 8px;
   }
 
   .sites-section {
-    margin: 24px 8px;
+    margin: 24px 0;
     padding: 20px;
   }
 
   .sites-title {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
 
   .sites-desc {
@@ -317,11 +185,11 @@
   }
 
   .sites-card-desc {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   .sites-card-btn {
     padding: 8px 18px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 }
